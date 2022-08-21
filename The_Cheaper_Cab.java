@@ -21,15 +21,11 @@ Constraints :-
 1001≤X,Y≤100
 
 Sample 1:-
-Input
-Output
+Input            Output
 3
-30 65
-42 42
-90 50
-FIRST
-ANY
-SECOND
+30 65            FIRST
+42 42            ANY
+90 50            SECOND        
 
 Explanation:
 Test case 11: The first cab service is cheaper than the second cab service.
