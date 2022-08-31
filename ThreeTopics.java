@@ -1,0 +1,80 @@
+/*  Problem:
+    The Chef has reached the finals of the Annual Inter-school Declamation contest.
+    For the finals, students were asked to prepare 10 topics. However, Chef was only able to prepare three topics,
+    numbered A, B and C — he is totally blank about the other topics. This means Chef can only win the contest if he
+    gets the topics A, B or C to speak about.
+
+    On the contest day, Chef gets topic X. Determine whether Chef has any chances of winning the competition.
+    Print "Yes" if it is possible for Chef to win the contest, else print "No".
+    You may print each character of the string in either uppercase or lowercase
+    (for example, the strings yEs, yes, Yes, and YES will all be treated as identical).
+
+    Input Format:
+    The first and only line of input will contain a single line containing four space-separated integers A, B, C, and X
+     — the three topics Chef has prepared and the topic that was given to him on contest day.
+
+    Output Format:
+    For each testcase, output in a single line "Yes" or "No".
+    You may print each character of the string in either uppercase or lowercase
+    (for example, the strings yEs, yes, Yes, and YES will all be treated as identical).
+
+    Constraints:
+    1≤A,B,C,X≤10
+    A, B, C are distinct.
+
+    Subtasks
+    Subtask #1 (100 points): Original constraints
+
+    Sample 1:
+    Input       Output
+    2 3 7 3     Yes
+    Explanation:
+    Chef had prepared the topics: 2, 3, 7. Chef gets to speak on the topic: 3.
+    Since Chef had already prepared this, there is a chance that he can win the contest.
+
+    Sample 2:
+    Input       Output
+    4 6 8 5     No
+    Explanation:
+    Chef had prepared the topics: 4,6,8. Chef gets to speak on the topic: 5.
+    Since Chef didn't prepare this topic, there is no chance that he can win the contest.
+ */
+
+import java.util.Scanner;
+
+public class ThreeTopics {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int A = s.nextInt();
+        if(A<0 || A>10){
+            System.exit(0);
+        }
+
+        int B = s.nextInt();
+        if(B<0 || B>10){
+            System.exit(0);
+        }
+
+        int C = s.nextInt();
+        if(C<0 || C>10){
+            System.exit(0);
+        }
+
+        int X = s.nextInt();
+        if(X<0 || X>10){
+            System.exit(0);
+        }
+
+        if(A==X){
+            System.out.println("YES");
+        }
+        else if (B==X){
+            System.out.println("YES");
+        } else if (C==X) {
+            System.out.println("YES");
+        }
+        else {
+            System.out.println("NO");
+        }
+    }
+}
